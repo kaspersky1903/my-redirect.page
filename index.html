@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reindirizzamento</title>
-  <meta charset="utf-8">
-  <script type="text/javascript">
-    window.onload = function() {
-      // Primo URL da visitare
-      window.location.href = "https://spotify.app.link?product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Falbum%2F5v4PDWQDLFrKDPRf0Vy3pF%3Fautoplay%3Dtrue%26go%3D1%26sp_cid%3Dd0e3a9058b3d73597194319ee829cb50%26utm_source%3Dspotify_web_player%26utm_medium%3Dmobile%26fallback%3Dgetapp&%7Efeature=mobile&%7Echannel=spotify_web_player&feature=organic";
-      // Dopo un breve ritardo, reindirizza al secondo URL
-      setTimeout(function() {
-        window.location.href = "https://spotify.app.link?product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Falbum%2F5v4PDWQDLFrKDPRf0Vy3pF%3Fautoplay%3Dtrue%26go%3D1%26sp_cid%3Dd0e3a9058b3d73597194319ee829cb50%26utm_source%3Dspotify_web_player%26utm_medium%3Dmobile%26fallback%3Dgetapp&%7Efeature=mobile&%7Echannel=spotify_web_player&feature=organic";
-      }, 5000); // 5000 millisecondi = 5 secondi
-    };
-  </script>
+    <title>Ascolta su Spotify</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        window.location.href = "spotify://track/5v4PDWQDLFrKDPRf0Vy3pF";
+        setTimeout(function(){
+            window.location = 'https://open.spotify.com/track/5v4PDWQDLFrKDPRf0Vy3pF';
+        }, 2000);
+    });
+    </script>
 </head>
 <body>
-  <p>Attendi, stai per essere reindirizzato...</p>
+    <p>Reindirizzamento a Spotify...</p>
 </body>
 </html>
